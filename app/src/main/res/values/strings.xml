@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">EveryDayApp</string>
+    <string name="tip_1">Простейшая идея. Доверяй себе</string>
+    <string name="description_1">A simple idea. Trust myself. Дэниел Киз — «Цветы для Элджернона»</string>
+
+    <string name="tip_2">Делай просто, насколько возможно, но не проще этого</string>
+    <string name="description_2">Everything should be made as simple as possible, but no simpler. Альберт Эйнштейн</string>
+
+    <string name="tip_3">Найди внутри себя радость, и эта радость исцелит боль</string>
+    <string name="description_3">Find a place inside where there’s joy, and the joy will burn out the pain. Джозеф Кэмпбелл</string>
+
+    <string name="tip_4">Слова всего лишь ветер. Они не могут тебя ранить</string>
+    <string name="description_4">Слова всего лишь ветер. Они не могут тебя ранить. Позволь им пролететь мимо. Words are wind. They cannot hurt you. Let them wash over you. Джордж Мартин</string>
+
+    <string name="tip_5">Измените ваши мысли, и вы измените ваш мир</string>
+    <string name="description_5">Измените ваши мысли, и вы измените ваш мир. Change your thoughts and you change your world. Норман Винсент Пил</string>
+
+    <string name="tip_6">Не все могут преуспеть во всем</string>
+    <string name="description_6">Не все могут преуспеть во всем. Но успех приходит только с самоорганизованностью и решительностью. Not everyone can truly succed in everything. But success only comes with self-management and determination. Тоже гарвардская поговорка.</string>
+
+    <string name="tip_7">Гений — это лишь 1% вдохновения и 99% труда</string>
+    <string name="description_7">Genius is one percent inspiration, and ninety-nine percent perspiration. Томас Эдисон</string>
 </resources>
