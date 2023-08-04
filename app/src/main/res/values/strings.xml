@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">EveryDayApp</string>
+
+    <string  name="day_number_title">Day %s</string>
+
     <string name="tip_1">Простейшая идея. Доверяй себе</string>
     <string name="description_1">A simple idea. Trust myself. Дэниел Киз — «Цветы для Элджернона»</string>
 
