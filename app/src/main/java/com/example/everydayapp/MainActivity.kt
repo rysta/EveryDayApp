@@ -46,7 +46,7 @@ fun EveryDayApp(){
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
-    EveryDayAppTheme {
+    EveryDayAppTheme(darkTheme = false) {
         EveryDayApp()
     }
 }

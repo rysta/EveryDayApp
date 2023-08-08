@@ -28,8 +28,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.everydayapp.data.TipRepository
 import com.example.everydayapp.data.TipRepository.tips
 import com.example.everydayapp.model.Tip
 
@@ -40,7 +38,7 @@ fun TipTopAppBar(){
         title = {
             Text(
                 text = stringResource(R.string.app_name),
-                style = MaterialTheme.typography.bodyLarge,
+                style = MaterialTheme.typography.displayLarge,
             )
         },
         scrollBehavior = exitUntilCollapsedScrollBehavior()
