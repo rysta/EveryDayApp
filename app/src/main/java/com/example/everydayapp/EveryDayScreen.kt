@@ -1,6 +1,7 @@
 package com.example.everydayapp
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -16,9 +17,12 @@ import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBarDefaults.enterAlwaysScrollBehavior
 import androidx.compose.material3.TopAppBarDefaults.exitUntilCollapsedScrollBehavior
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
@@ -36,7 +40,7 @@ fun TipTopAppBar(){
         title = {
             Text(
                 text = stringResource(R.string.app_name),
-                style = MaterialTheme.typography.bodyLarge
+                style = MaterialTheme.typography.bodyLarge,
             )
         },
         scrollBehavior = exitUntilCollapsedScrollBehavior()
@@ -62,8 +66,11 @@ fun TipScreen(innerPadding: PaddingValues){
 
 @Composable
 fun TipItem(tip: Tip, modifier: Modifier = Modifier){
+
+    var expanded by remember { mutableStateOf(false) }
+
     Card(
-        modifier = modifier,
+        modifier = modifier.clickable { expanded = !expanded },
         elevation = CardDefaults
             .cardElevation(defaultElevation = dimensionResource(R.dimen.card_elevation))
     ) {
@@ -82,16 +89,12 @@ fun TipItem(tip: Tip, modifier: Modifier = Modifier){
                     contentDescription = stringResource(tip.tipRes),
                     contentScale = ContentScale.Crop
                 )
-                Spacer(modifier = Modifier.height(height = dimensionResource(R.dimen.padding_small)))
 
-                Text(text = stringResource(tip.descriptionRes), style = MaterialTheme.typography.bodyMedium)
+                if(expanded){
+                    Spacer(modifier = Modifier.height(height = dimensionResource(R.dimen.padding_small)))
+                    Text(text = stringResource(tip.descriptionRes), style = MaterialTheme.typography.bodyMedium)
+                }
             }
         }
     }
-}
-
-@Composable
-@Preview
-fun TipItemPreview(){
-    TipItem(tip = TipRepository.tips.component1())
 }
